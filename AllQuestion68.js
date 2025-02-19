@@ -379,10 +379,11 @@ function randomInRange(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 console.log("Random number between 1 and 10:", randomInRange(1, 10));
-// 48. Function to return the reverse of an array
+// Function to return the reverse of an array without modifying the original
 function reverseArray(arr) {
-    return arr.reverse();
+    return arr.slice().reverse(); // or [...arr].reverse();
 }
+
 console.log("Reverse of [1, 2, 3, 4, 5]:", reverseArray([1, 2, 3, 4, 5]));
 // 49. Function to calculate the Fibonacci sequence up to n numbers
 function fibonacciSequence(n) {
